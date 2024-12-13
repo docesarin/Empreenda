@@ -1,19 +1,29 @@
-# now on linux b1tch3s
 
-meta = int(input("Qual a sua meta mensal em reais? "))
-totalProdutos = int(input("No total, quantos produtos você vende? "))
+# github.com/docesarin
+
+meta = int(input("Digite sua meta mensal: "))
+
+metaDiaria = meta/25
+
+qp = int(input("Quantos produtos você vende?"))
 
 produtos = []
 valores = []
+qpi = []
+metaIndividual = metaDiaria / qp
 
-for i in range(totalProdutos):
-    produto = input("Digite o nome do produto: ")
-    valor = float(input("Qual o valor desse produto: "))
+for i in range(qp):
+    p = str(input("Digite o nome do produto: "))
+    v = float(input("Digite o valor do produto: "))
 
-    produtos.append(produto)
-    valores.append(valor)
+    produtos.append(p)
+    valores.append(v)
 
-somaProdutos = sum(valores)
+    mi = metaIndividual/v
+    qpi.append(mi)
 
-print("Se você vender uma unidade de cada produto terá ", somaProdutos)
-print("Tirando os domingos, seu mês terá em media 25 dias, e você fará ", somaProdutos * 25, " por mês.")
+    print("Você precisa vender ", qpi[i], " o ", p[i], " por dia. em 25 dias para fazer ", metaIndividual, " por dia, somando ", metaDiaria, " por dia, assim fazendo ", meta, " em 25 dias (media do mês tirando os domingos).")
+
+
+
+
