@@ -1,29 +1,48 @@
-
 # github.com/docesarin
 
-meta = int(input("Digite sua meta mensal: "))
+print("===========================================")
+print("       CALCULADORA DE META MENSAL          ")
+print("===========================================")
 
-metaDiaria = meta/25
+# Solicitar a meta mensal
+meta = int(input("Digite sua meta mensal (em R$): "))
+metaDiaria = meta / 25  # Supondo 25 dias úteis no mês
 
-qp = int(input("Quantos produtos você vende?"))
+# Solicitar a quantidade de produtos
+qp = int(input("Quantos produtos você vende? "))
 
 produtos = []
 valores = []
 qpi = []
 metaIndividual = metaDiaria / qp
 
+# Loop para coletar dados dos produtos
+print("\nAgora, vamos registrar os produtos e seus respectivos preços:")
 for i in range(qp):
-    p = str(input("Digite o nome do produto: "))
-    v = float(input("Digite o valor do produto: "))
+    p = input(f"\nDigite o nome do {i+1}º produto: ")  # Melhor mensagem para o usuário
+    v = float(input(f"Digite o valor do {i+1}º produto (em R$): "))  # Melhor mensagem para o usuário
 
     produtos.append(p)
     valores.append(v)
 
-    mi = metaIndividual/v
+    # Calcular a meta de unidades por produto para atingir a meta individual
+    mi = metaIndividual / v
     qpi.append(mi)
 
-    print("Você precisa vender ", qpi[i], " o ", p[i], " por dia. em 25 dias para fazer ", metaIndividual, " por dia, somando ", metaDiaria, " por dia, assim fazendo ", meta, " em 25 dias (media do mês tirando os domingos).")
+# Exibir a necessidade de vendas por produto
+print("\n===========================================")
+print("      RESUMO DE VENDAS NECESSÁRIAS         ")
+print("===========================================")
+for i in range(qp):
+    print(f"Para atingir sua meta diária de R${metaIndividual:.2f}, você precisa vender {qpi[i]:.2f} unidades do produto '{produtos[i]}' por dia.")
 
-
-
-
+# Exibir resumo final
+print("\n===========================================")
+print(f"RESUMO FINAL:")
+print("===========================================")
+print(f"Meta Mensal: R${meta}")
+print(f"Meta Diária: R${metaDiaria:.2f}")
+print(f"Com base em {qp} produtos, sua meta diária de vendas é dividida entre os produtos, considerando o preço de cada um.")
+print("\n===========================================")
+print("   Obrigado por usar a calculadora de metas!")
+print("===========================================")
