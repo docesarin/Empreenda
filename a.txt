@@ -1,0 +1,7 @@
+Programa Minha Casa, Minha Vida - Recursos FGTS
+Prazo	420 meses
+Valor da entrada	R$ 4.927,29
+Juros	4,5000% a.a
+CET - Custo Efetivo Total	0,66% a.a
+CESH - Custo Efetivo do Seguro Habitacional	3,80% a.a
+Seguradora	CAIXA RESIDENCIAL HABITACIONAL MAIS
