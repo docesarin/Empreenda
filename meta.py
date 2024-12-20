@@ -17,3 +17,20 @@ somaProdutos = sum(valores)
 
 print("Se você vender uma unidade de cada produto terá ", somaProdutos)
 print("Tirando os domingos, seu mês terá em media 25 dias, e você fará ", somaProdutos * 25, " por mês.")
+
+
+# quantos preciso vender por mês para alcançar a meta
+# somaProdutos * quantidadeQueFalta = meta
+
+# minha meta é ter o ticket medio de 20 reais por pessoa, com no minimo 50 pessoas por dia
+# ticketMedio * clientes = saldoDiario
+# saldoDiario * 25 = saldoMensal
+
+# config empresa
+
+# nome empresa
+# media clientes diario
+# meta
+# cadastrar produtos
+# ticketMedio??? não sei se isso eu botaria
+# gastos  
