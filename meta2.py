@@ -12,7 +12,7 @@ qntProduto = qntMes / valorProduto
 if tempo <= 1:
     qntMes = meta / 25 
 
-    print(f"Você precisa vender {qntProduto} R$ em 25 dias, vendendo {qntMes} unidades de {produto} por dia.")
+    print(f"Você precisa vender {qntProduto} em 25 dias, vendendo {qntMes} unidades de {produto} por dia.")
 else: 
 
     print(f"Você precisa vender {qntProduto} R$ por mês em {tempo} meses, vendendo {qntMes} unidades de {produto} em um mês")
